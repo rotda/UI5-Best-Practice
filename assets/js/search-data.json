@@ -1,0 +1,68 @@
+{"0": {
+    "doc": "About",
+    "title": "About",
+    "content": "to-be-filled . ",
+    "url": "/UI5-Best-Practice/about/",
+    "relUrl": "/about/"
+  },"1": {
+    "doc": "Topic Collection",
+    "title": "Topic Collection",
+    "content": ". | Error Handling (Tobias) . | i18n (Marian) . | Naming Convetion (tbd) . | Patterns (tbd) . | Layouts (tbd) . | Navigation (tbd) . | Routing | DeepLinks | . | oData v2,v4, REST (tbd) . | Do and Don'ts | Don't: Plain Ajax Requests | . | Controls (tbd) . | Do's and Don'ts . | Do: Smart Controls | . | . | Custom Controls (tbd) . | Wow to create and use custom controls? | . | Fiori Elements vs. Free-Style (tbd) . | When use what | . | Anotations XML vs Backend (tbd) . | WebApp Folder vs Backend | . | Testing (@vobu) . | OPA | . | Tooling (tbd) . | CI|CD | App Versioning - Best practice to follow up on Versions (Support) | UI5 Generator (https://github.com/SAP/generator-easy-ui5) | . | IDE (@Christian) . | VSCode / BAS | . | Performance (tbd) . | Async vs Sync | Promise | . | UI-Client (tbd) . | Camera , GPS , .. | PWA | . | UX (Janis) . | Fiori UX Guide (https://experience.sap.com/fiori-design-web/sap-fiori/) | . | Extension of SAP Apps (tbd) . | Security (tbd) . | WebSecurity in UI5 - Best Practices - Dos and Fonts | Authorizations in UI5 Apps - Best Practice on how to? | . | Tipps (tbd) . | Client Debugging - Best Practice on how to? | . | To be defined . | Validations . | how do I validate forms and fields generically? | . | External Libraries - how do I integrate them in my UI5 project? | Upload (Cloud/onPremise) - Best Practice on how to? | Encapsulation / Structuring of Code / MVC Concept? | . | . ",
+    "url": "/UI5-Best-Practice/",
+    "relUrl": "/"
+  },"2": {
+    "doc": "i18n",
+    "title": "i18n",
+    "content": "i18n . ",
+    "url": "/UI5-Best-Practice/i18n/",
+    "relUrl": "/i18n/"
+  },"3": {
+    "doc": "i18n Overview",
+    "title": "Overview i18n Overview",
+    "content": "Many companies use SAP systems and applications and many different countries. To ensure easy translation, the &quot;i18n&quot; (Internationalization) process is used. The app is not always recreated, but only the texts are translated and replaced. ",
+    "url": "/UI5-Best-Practice/i18n/overview.html#overview-i18n-overview",
+    "relUrl": "/i18n/overview.html#overview-i18n-overview"
+  },"4": {
+    "doc": "i18n Overview",
+    "title": "Language Tags",
+    "content": "To identify the individual languages, so-called &quot;Language Tags&quot; are used which are defined by [BCP-47] (http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). These language tags are stored in the SAP system in table T002 for all stored languages. These correspond to the &quot;ISO 639 alpha-2 language code&quot;. The SAPUI5 application then converts the determined language key into a BCP-47 tag. As a best practice, it should be defined that the BCP-47 language code should be kept as short as possible. When creating it, you should avoid regions, script or subtags as far as possible - unless you add important and helpful information. Good example: i18n.properties i18n_DE.properties Bad example: i18n.properties i18n_DE.properties i18n_DE_DE.properties i18n_DE_CH.properties i18n_DE_AT.properties . ",
+    "url": "/UI5-Best-Practice/i18n/overview.html#language-tags",
+    "relUrl": "/i18n/overview.html#language-tags"
+  },"5": {
+    "doc": "i18n Overview",
+    "title": "Files in the UI5 App",
+    "content": "The individual translations are stored in the i18n folder with the prefix i18n_ and the corresponding language tag. In addition, a default file is defined which is automatically called if no language is specified. | | . | SAPUI5 i18n Files and Folder | . Here are two simple examples, for a German and an English translation. The &quot;keys&quot; are always identical and will be retrieved later by App based on them. The keys are written in (lower) camelCase. | | . | i18n Simple Example DE File | . | | . | i18n Simple Example EN File | . ",
+    "url": "/UI5-Best-Practice/i18n/overview.html#files-in-the-ui5-app",
+    "relUrl": "/i18n/overview.html#files-in-the-ui5-app"
+  },"6": {
+    "doc": "i18n Overview",
+    "title": "i18n Overview",
+    "content": " ",
+    "url": "/UI5-Best-Practice/i18n/overview.html",
+    "relUrl": "/i18n/overview.html"
+  },"7": {
+    "doc": "i18n Usage",
+    "title": "Usage of i18n in SAPUI5 Apps",
+    "content": " ",
+    "url": "/UI5-Best-Practice/i18n/usage.html#usage-of-i18n-in-sapui5-apps",
+    "relUrl": "/i18n/usage.html#usage-of-i18n-in-sapui5-apps"
+  },"8": {
+    "doc": "i18n Usage",
+    "title": "Setup",
+    "content": ". | create a new folder with the name &quot;i18n . | create at least one file with the name &quot;i18n.properties . The folder should be created in the &quot;webapp&quot; folder . | | . | Folder Structure and Init File for i18n | . | configure the manifest.json . In our manifest.json we have to configure the above created i18n file under models area within SAPUI5 section as shown below. This code is placed in &quot;sap.ui5&quot; --&gt; &quot;models&quot; . \"i18n\": { \"type\": \"sap.ui.model.resource.ResourceModel\", \"settings\": { \"bundleName\": \"your.namespace.i18n.i18n\" } . | | . | Folder Structure and Init File for i18n | . | . ",
+    "url": "/UI5-Best-Practice/i18n/usage.html#setup",
+    "relUrl": "/i18n/usage.html#setup"
+  },"9": {
+    "doc": "i18n Usage",
+    "title": "Usage in XML Views",
+    "content": "Since we have defined a model in manifest.json, we access the individual keys in the XML view as with any other model. The i18n model is referenced first in curly brackets and then the key: &quot;{i18n&gt;streetNameNumber}&quot; . We take as an example the already previously defined translations . | | . | i18n Simple Example EN File | . | | . | i18n example XML View | . ",
+    "url": "/UI5-Best-Practice/i18n/usage.html#usage-in-xml-views",
+    "relUrl": "/i18n/usage.html#usage-in-xml-views"
+  },"10": {
+    "doc": "i18n Usage",
+    "title": "i18n Usage",
+    "content": " ",
+    "url": "/UI5-Best-Practice/i18n/usage.html",
+    "relUrl": "/i18n/usage.html"
+  }
+}
